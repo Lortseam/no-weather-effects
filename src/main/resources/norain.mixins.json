@@ -4,7 +4,8 @@
   "package": "me.lortseam.norain.mixin",
   "compatibilityLevel": "JAVA_8",
   "client": [
-    "ClientWorldMixin"
+    "ClientWorldMixin",
+    "ClientPlayNetworkHandlerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
