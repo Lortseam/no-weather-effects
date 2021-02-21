@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "id": "norain",
+  "id": "noweathereffects",
   "version": "${version}",
-  "name": "No Rain",
-  "description": "Disables rain and snow rendering",
+  "name": "No Weather Effects",
+  "description": "Disables client-side weather effects",
   "authors": [
     "Lortseam"
   ],
   "contact": {
     "email": "lortseam@gmail.com",
-    "sources": "https://gitlab.com/Lortseam/no-rain",
-    "issues": "https://gitlab.com/Lortseam/no-rain/-/issues"
+    "sources": "https://gitlab.com/Lortseam/no-weather-effects",
+    "issues": "https://gitlab.com/Lortseam/no-weather-effects/-/issues"
   },
   "license": "Apache-2.0",
   "environment": "client",
