@@ -16,7 +16,7 @@
   "environment": "client",
   "mixins": [
     {
-      "config": "norain.mixins.json",
+      "config": "noweathereffects.mixins.json",
       "environment": "client"
     }
   ],

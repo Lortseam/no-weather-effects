@@ -1,4 +1,4 @@
-package me.lortseam.norain.mixin;
+package me.lortseam.noweathereffects.mixin;
 
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.util.profiler.Profiler;

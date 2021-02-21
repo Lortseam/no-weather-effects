@@ -1,4 +1,4 @@
-package me.lortseam.norain.mixin;
+package me.lortseam.noweathereffects.mixin;
 
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import org.spongepowered.asm.mixin.Mixin;

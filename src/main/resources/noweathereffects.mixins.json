@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "me.lortseam.norain.mixin",
+  "package": "me.lortseam.noweathereffects.mixin",
   "compatibilityLevel": "JAVA_8",
   "client": [
     "ClientWorldMixin",
