@@ -1,0 +1,4 @@
+{
+  "config.noweathereffects.enabled": "Enabled",
+  "config.noweathereffects.enabled.tooltip": "Whether to hide all weather effects"
+}

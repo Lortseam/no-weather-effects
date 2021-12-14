@@ -14,6 +14,11 @@
   },
   "license": "Apache-2.0",
   "environment": "client",
+  "entrypoints": {
+    "client": [
+      "me.lortseam.noweathereffects.NoWeatherEffects"
+    ]
+  },
   "mixins": [
     {
       "config": "noweathereffects.mixins.json",

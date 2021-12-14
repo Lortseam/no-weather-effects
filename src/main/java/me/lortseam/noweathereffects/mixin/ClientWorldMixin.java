@@ -1,5 +1,6 @@
 package me.lortseam.noweathereffects.mixin;
 
+import me.lortseam.noweathereffects.NoWeatherEffects;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.util.profiler.Profiler;
 import net.minecraft.util.registry.RegistryKey;
@@ -19,12 +20,12 @@ public abstract class ClientWorldMixin extends World {
 
     @Override
     public float getRainGradient(float delta) {
-        return 0;
+        return NoWeatherEffects.isEnabled() ? 0 : super.getRainGradient(delta);
     }
 
     @Override
     public float getThunderGradient(float delta) {
-        return 0;
+        return NoWeatherEffects.isEnabled() ? 0 : super.getThunderGradient(delta);
     }
 
 }

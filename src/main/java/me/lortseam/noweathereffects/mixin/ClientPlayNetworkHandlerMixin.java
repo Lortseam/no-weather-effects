@@ -1,5 +1,6 @@
 package me.lortseam.noweathereffects.mixin;
 
+import me.lortseam.noweathereffects.NoWeatherEffects;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.entity.EntityType;
 import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
@@ -13,7 +14,7 @@ public abstract class ClientPlayNetworkHandlerMixin {
 
     @Inject(method = "onEntitySpawn", at = @At("HEAD"), cancellable = true)
     private void noweathereffects$cancelLightningSpawn(EntitySpawnS2CPacket packet, CallbackInfo ci) {
-        if (packet.getEntityTypeId() == EntityType.LIGHTNING_BOLT) {
+        if (NoWeatherEffects.isEnabled() && packet.getEntityTypeId() == EntityType.LIGHTNING_BOLT) {
             ci.cancel();
         }
     }
