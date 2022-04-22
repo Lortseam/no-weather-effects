@@ -8,20 +8,20 @@ import me.lortseam.noweathereffects.NoWeatherEffects;
 import net.fabricmc.loader.api.FabricLoader;
 
 @ConfigEntries
-public class Settings extends Config implements ConfigContainer, NoWeatherEffectsState {
+public class ModConfig extends Config implements ConfigContainer, ModState {
 
-    public static Settings initialize() {
-        Settings settings = new Settings();
-        settings.load();
+    public static ModConfig initialize() {
+        ModConfig config = new ModConfig();
+        config.load();
         if (FabricLoader.getInstance().isModLoaded("cloth-config")) {
             ClothConfigScreenBuilder.setMain(NoWeatherEffects.MOD_ID, new ClothConfigScreenBuilder());
         }
-        return settings;
+        return config;
     }
 
     private boolean enabled = true;
 
-    private Settings() {
+    private ModConfig() {
         super(NoWeatherEffects.MOD_ID);
     }
 

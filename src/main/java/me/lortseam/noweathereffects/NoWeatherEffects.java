@@ -1,14 +1,14 @@
 package me.lortseam.noweathereffects;
 
-import me.lortseam.noweathereffects.config.Settings;
-import me.lortseam.noweathereffects.config.NoWeatherEffectsState;
+import me.lortseam.noweathereffects.config.ModConfig;
+import me.lortseam.noweathereffects.config.ModState;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 
 public class NoWeatherEffects implements ClientModInitializer {
 
     public static final String MOD_ID = "noweathereffects";
-    private static NoWeatherEffectsState state;
+    private static ModState state;
 
     public static boolean isEnabled() {
         return state.isEnabled();
@@ -17,9 +17,9 @@ public class NoWeatherEffects implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         if(FabricLoader.getInstance().isModLoaded("completeconfig")) {
-            state = Settings.initialize();
+            state = ModConfig.initialize();
         } else {
-            state = NoWeatherEffectsState.DEFAULT;
+            state = ModState.DEFAULT;
         }
     }
 
