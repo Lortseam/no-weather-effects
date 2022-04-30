@@ -3,6 +3,7 @@ package me.lortseam.noweathereffects.config;
 import me.lortseam.completeconfig.api.ConfigContainer;
 import me.lortseam.completeconfig.api.ConfigEntries;
 import me.lortseam.completeconfig.data.Config;
+import me.lortseam.completeconfig.gui.ConfigScreenBuilder;
 import me.lortseam.completeconfig.gui.cloth.ClothConfigScreenBuilder;
 import me.lortseam.noweathereffects.NoWeatherEffects;
 import net.fabricmc.loader.api.FabricLoader;
@@ -14,7 +15,7 @@ public class ModConfig extends Config implements ConfigContainer, ModState {
         ModConfig config = new ModConfig();
         config.load();
         if (FabricLoader.getInstance().isModLoaded("cloth-config")) {
-            ClothConfigScreenBuilder.setMain(NoWeatherEffects.MOD_ID, new ClothConfigScreenBuilder());
+            ConfigScreenBuilder.setMain(NoWeatherEffects.MOD_ID, new ClothConfigScreenBuilder());
         }
         return config;
     }
