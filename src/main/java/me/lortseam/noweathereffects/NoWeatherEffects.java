@@ -16,7 +16,7 @@ public class NoWeatherEffects implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        if(FabricLoader.getInstance().isModLoaded("completeconfig")) {
+        if(FabricLoader.getInstance().isModLoaded("completeconfig-base")) {
             state = ModConfig.initialize();
         } else {
             state = ModState.DEFAULT;
