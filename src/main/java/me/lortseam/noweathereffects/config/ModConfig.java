@@ -1,6 +1,5 @@
 package me.lortseam.noweathereffects.config;
 
-import me.lortseam.completeconfig.api.ConfigContainer;
 import me.lortseam.completeconfig.api.ConfigEntries;
 import me.lortseam.completeconfig.data.Config;
 import me.lortseam.completeconfig.gui.ConfigScreenBuilder;
@@ -8,8 +7,8 @@ import me.lortseam.completeconfig.gui.cloth.ClothConfigScreenBuilder;
 import me.lortseam.noweathereffects.NoWeatherEffects;
 import net.fabricmc.loader.api.FabricLoader;
 
-@ConfigEntries
-public class ModConfig extends Config implements ConfigContainer, ModState {
+@ConfigEntries(includeAll = true)
+public class ModConfig extends Config implements ModState {
 
     public static ModConfig initialize() {
         ModConfig config = new ModConfig();
