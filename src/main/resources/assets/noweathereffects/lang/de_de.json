@@ -1,4 +1,4 @@
 {
   "config.noweathereffects.enabled": "Aktiviert",
-  "config.noweathereffects.enabled.tooltip": "Verstecke jegliche Wettereffekte"
+  "config.noweathereffects.enabled.description": "Verstecke jegliche Wettereffekte"
 }
