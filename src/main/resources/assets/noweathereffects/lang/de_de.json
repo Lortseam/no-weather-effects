@@ -1,4 +1,5 @@
 {
   "config.noweathereffects.enabled": "Aktiviert",
-  "config.noweathereffects.enabled.description": "Verstecke jegliche Wettereffekte"
+  "config.noweathereffects.enabled.description": "Verstecke jegliche Wettereffekte",
+  "config.noweathereffects.toggleKey": "Taste zum Umschalten"
 }

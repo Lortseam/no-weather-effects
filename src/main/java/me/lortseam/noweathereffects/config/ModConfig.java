@@ -1,11 +1,13 @@
 package me.lortseam.noweathereffects.config;
 
+import lombok.Getter;
 import me.lortseam.completeconfig.api.ConfigEntries;
 import me.lortseam.completeconfig.data.Config;
 import me.lortseam.completeconfig.gui.ConfigScreenBuilder;
 import me.lortseam.completeconfig.gui.cloth.ClothConfigScreenBuilder;
 import me.lortseam.noweathereffects.NoWeatherEffects;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.client.util.InputUtil;
 
 @ConfigEntries(includeAll = true)
 public class ModConfig extends Config implements ModState {
@@ -20,6 +22,8 @@ public class ModConfig extends Config implements ModState {
     }
 
     private boolean enabled = true;
+    @Getter
+    private InputUtil.Key toggleKey = InputUtil.UNKNOWN_KEY;
 
     private ModConfig() {
         super(NoWeatherEffects.MOD_ID);
@@ -28,6 +32,11 @@ public class ModConfig extends Config implements ModState {
     @Override
     public boolean isEnabled() {
         return enabled;
+    }
+
+    public void toggle() {
+        enabled = !enabled;
+        save();
     }
 
 }
