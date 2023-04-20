@@ -10,7 +10,7 @@ import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.util.InputUtil;
 
 @ConfigEntries(includeAll = true)
-public class ModConfig extends Config implements ModState {
+public class ModConfig extends Config implements IModConfig {
 
     public static ModConfig initialize() {
         ModConfig config = new ModConfig();
@@ -34,6 +34,7 @@ public class ModConfig extends Config implements ModState {
         return enabled;
     }
 
+    @Override
     public void toggle() {
         enabled = !enabled;
         save();

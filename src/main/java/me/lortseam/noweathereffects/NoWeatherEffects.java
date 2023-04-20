@@ -1,35 +1,32 @@
 package me.lortseam.noweathereffects;
 
 import me.lortseam.noweathereffects.config.ModConfig;
-import me.lortseam.noweathereffects.config.ModState;
+import me.lortseam.noweathereffects.config.IModConfig;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
 public class NoWeatherEffects implements ClientModInitializer {
 
     public static final String MOD_ID = "noweathereffects";
-    private static ModState state;
+    @Nullable
+    private static IModConfig config;
 
     @Override
     public void onInitializeClient() {
         if(FabricLoader.getInstance().isModLoaded("completeconfig-base")) {
-            state = ModConfig.initialize();
-        } else {
-            state = ModState.DEFAULT;
+            config = ModConfig.initialize();
         }
     }
 
     public static boolean isEnabled() {
-        return state.isEnabled();
+        return config == null || config.isEnabled();
     }
 
-    public static Optional<ModConfig> getConfig() {
-        if (state instanceof ModConfig) {
-            return Optional.of((ModConfig) state);
-        }
-        return Optional.empty();
+    public static Optional<IModConfig> getConfig() {
+        return Optional.ofNullable(config);
     }
 
 }
