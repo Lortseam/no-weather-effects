@@ -1,0 +1,5 @@
+{
+    "config.noweathereffects.enabled": "Activé",
+    "config.noweathereffects.enabled.description": "Indique s'il faut masquer tous les effets météorologiques",
+    "config.noweathereffects.toggleKey": "Touche d'activation"
+}
