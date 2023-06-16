@@ -17,6 +17,9 @@
   "entrypoints": {
     "client": [
       "me.lortseam.noweathereffects.NoWeatherEffects"
+    ],
+    "modmenu": [
+      "me.lortseam.noweathereffects.config.ModMenuIntegration"
     ]
   },
   "mixins": [
